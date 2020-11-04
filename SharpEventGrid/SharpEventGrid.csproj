@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Andre Carlucci</Authors>
+    <Company>Andre Carlucci</Company>
+    <Product />
+    <Version>1.2.1</Version>
+    <PackageProjectUrl>https://github.com/SharpTools/SharpEventGrid</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/SharpTools/SharpEventGrid</RepositoryUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/SharpTools/SharpEventGrid/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>azure eventgrid events reactive microservices</PackageTags>
+    <Description>Simple library to send Events to Azure EventGrid</Description>
+    <AssemblyVersion>1.2.0.0</AssemblyVersion>
+    <FileVersion>1.2.0.0</FileVersion>
+    <PackageIconUrl>https://raw.githubusercontent.com/SharpTools/SharpEventGrid/master/eventgrid.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentNHibernate" Version="3.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EventBus\EventBus.csproj" />
+  </ItemGroup>
+
+</Project>
