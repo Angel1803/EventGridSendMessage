@@ -18,32 +18,21 @@ namespace SharpEventGrid.Sample
 
             //Obtencion de los datos y serializo el mensaje
             Message message = GetMessageData();
-            var serializeMessage = JsonConvert.SerializeObject(message);
             //Se crea la conexión
             var clientConnection = new EventGridClient(new Uri(eventGridUrl), eventGridKey);
             //Envio el mensaje a traves del cliente que establece la conexion 
             clientConnection.Publish(message);
-
-            //var client = new EventGridClient(new Uri(url), key);
-            //await client.Send(new Event {
-            //    Subject = "/foo",
-            //    EventType = "super-event",
-            //    Data = data
-            //});
         }
 
         private static Message GetMessageData()
         {
-            //Obtencion de los datos
-            //Message listMessage = new List<Message>();
+            //Se definen los datos a enviar
             Message message = new Message();
 
             message.Id = 04160015;
-            message.Name = "Miguel Angel Garcia Uc";
+            message.Name = "Miguel Ángel García Uc";
             message.Profesion = "Ingenieria en Sistemas Computacionales";
-            message.Edad = 22;
-
-            //listMessage.Add(message);
+            message.Edad = 23;
 
             return message;
         }
